@@ -23,7 +23,7 @@ exports.guardarcaparecibida = (req, res)=>{
 });
 };
 
-//ACTUALIZAR un REGISTRO
+//ACTUALIZAR un capacitacion
 exports.actualizarcaparecibida= (req, res)=>{
     const idcapa = req.body.idcapa;
     const ci = req.body.ci;
