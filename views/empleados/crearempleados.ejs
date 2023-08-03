@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crear Empleados</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+
+</head>
+<body>
+    <nav class="navbar navbar-dark bg-dark">
+        <a href="/" class="navbar-brand">CREAR EMPLEADOS</a>
+    </nav>
+
+    <div class="container mt-4">     
+        <div class="card border-secondary">  
+            <div class="card-header">Nuevo Registro</div>
+            <div class="card-body">
+                <form action="/guardarempleados" method="POST">
+                  <div class="form-group">
+                    <label for="ci">Cedula de Identidad</label>
+                    <select class="form-control" id="cpais" name="cpais">
+                    <option value="">Seleccionar Empleado</option>
+                    <% if(data.length){
+                    for(var i = 0; i< data.length; i++) {%> 
+                    <option value="<%= data[i].cpais%>">
+                    <%= data[i].pais%>
+                    </option>
+                    <% } } %>
+                    </select>
+                    </div>                  
+                   
+                    <div class="mb-3">
+                        <label for="cipadre" class="form-label">Cedula de identidad de Padre</label>
+                        <input type="text" class="form-control" id="cipadre" name="cipadre" tabindex="1">
+                        </div> 
+
+                        <div class="mb-3">
+                        <label for="nom1" class="form-label">Nombre 1</label>
+                        <input type="text" class="form-control" id="nom1" name="nom1" tabindex="1">                             
+                        </div> 
+
+                        <div class="mb-3">
+                        <label for="nom2" class="form-label">Nombre 2</label>
+                        <input type="text" class="form-control" id="nom2" name="nom2" tabindex="1">        
+                        </div>      
+                        
+                         <div class="mb-3">
+                        <label for="ape1" class="form-label">Apellido 1</label>
+                        <input type="text" class="form-control" id="ape1" name="ape1" tabindex="1">        
+                        </div>   
+
+                         <div class="mb-3">
+                        <label for="ape2" class="form-label">Apellido 2</label>
+                        <input type="text" class="form-control" id="ape2" name="ape2" tabindex="1">        
+                        </div>   
+
+                         <div class="mb-3">
+                        <label for="sexo" class="form-label">Sexo</label>
+                        <input type="text" class="form-control" id="sexo" name="sexo" tabindex="1">        
+                        </div>   
+
+                         <div class="mb-3">
+                        <label for="direccion" class="form-label">Direccion</label>
+                        <input type="text" class="form-control" id="direccion" name="direccion" tabindex="1">        
+                        </div>   
+
+                         <div class="mb-3">
+                        <label for="lugarnac" class="form-label">Lugar de nacimiento</label>
+                        <input type="text" class="form-control" id="lugarnac" name="lugarnac" tabindex="1">        
+                        </div>   
+
+                         <div class="mb-3">
+                        <label for="teldomicilio" class="form-label">Telefono</label>
+                        <input type="text" class="form-control" id="teldomicilio" name="teldomicilio" tabindex="1">        
+                        </div>   
+
+                         <div class="mb-3">
+                        <label for="email" class="form-label">Email</label>
+                        <input type="text" class="form-control" id="email" name="email" tabindex="1">        
+                        </div>   
+
+                         <div class="mb-3">
+                        <label for="etnia" class="form-label">Etnia</label>
+                        <input type="text" class="form-control" id="etnia" name="etnia" tabindex="1">        
+                        </div>   
+
+                         <div class="mb-3">
+                        <label for="estcivil" class="form-label">Estado Civil</label>
+                        <input type="text" class="form-control" id="estcivil" name="estcivil" tabindex="1">        
+                        </div>   
+
+                         <div class="mb-3">
+                        <label for="colorpelo" class="form-label">Color de pelo</label>
+                        <input type="text" class="form-control" id="colorpelo" name="colorpelo" tabindex="1">        
+                        </div>   
+
+                         <div class="mb-3">
+                        <label for="estatura" class="form-label">Estatura</label>
+                        <input type="text" class="form-control" id="estatura" name="estatura" tabindex="1">        
+                        </div>   
+
+                         <div class="mb-3">
+                        <label for="peso" class="form-label">Peso</label>
+                        <input type="text" class="form-control" id="peso" name="peso" tabindex="1">        
+                        </div>   
+
+                         <div class="mb-3">
+                        <input type="idniveledu" name="idniveledu" value="<%= empleados.idniveledu %>" hidden>         
+                        </div>   
+
+                         <div class="mb-3">
+                        <label for="cargo" class="form-label">Cargo</label>
+                        <input type="text" class="form-control" id="cargo" name="cargo" tabindex="1">        
+                        </div>   
+
+                         <div class="mb-3">
+                        <label for="contrato" class="form-label">Contrato</label>
+                        <input type="text" class="form-control" id="contrato" name="contrato" tabindex="1">        
+                        </div>   
+
+                         <div class="mb-3">
+                        <label for="departamento" class="form-label">Departamento</label>
+                        <input type="text" class="form-control" id="departamento" name="departamento" tabindex="1">        
+                        </div>   
+
+                         <div class="mb-3">
+                        <label for="ubicacion" class="form-label">ubicacion</label>
+                        <input type="text" class="form-control" id="ubicacion" name="ubicacion" tabindex="1">        
+                        </div>   
+
+                         <div class="mb-3">
+                        <label for="estadofoto" class="form-label">Estado de foto</label>
+                        <input type="text" class="form-control" id="estadofoto" name="estadofoto" tabindex="1">        
+                        </div>   
+
+                         <div class="mb-3">
+                        <label for="clave" class="form-label">Clave</label>
+                        <input type="text" class="form-control" id="clave" name="clave" tabindex="1">        
+                        </div>   
+                      
+                      
+                    <button type="submit" class="btn btn-primary" tabindex="5">Guardar</button>
+                    <a href="/empleados" class="btn btn-secondary">Cancelar</a>
+                </form>
+            </div>
+        </div>        
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
+  
+
+</body>
+</html>
